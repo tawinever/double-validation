@@ -57,6 +57,7 @@ class SignupForm extends Model
             'name' => 'device_id',
             'value' => $user->auth_key,
             'expire' => time() + 60 * 60 * 24 * 30,
+            'httpOnly' => true,
         ]));
         $user->last_ip = Yii::$app->getRequest()->getUserIP();
         

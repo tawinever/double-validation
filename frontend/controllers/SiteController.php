@@ -96,6 +96,8 @@ class SiteController extends Controller
                 'name' => 'device_id',
                 'value' => $model->_user->auth_key,
                 'expire' => time() + 60 * 60 * 24 * 30,
+                'httpOnly' => true,
+
             ]));
 
             return $this->goBack();
